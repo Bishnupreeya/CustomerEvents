@@ -9,18 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name="marchant")
+//@Table(name="marchant")
 public class Marchant {
 	@Id
-	@Column(name = "trasanction_id", unique=true, nullable = false)
+	//@Column(name = "trasanction_id", unique=true, nullable = false)
 	private String trasanctionId;
-	@Column(name = "customer_id", nullable = false)
+	//@Column(name = "customer_id", nullable = false)
 	private String customerId;
-	@Column(name = "marchant_id", nullable = false)
+	//@Column(name = "marchant_id", nullable = false)
 	private String marchantId;
-	@Column(name = "trasanction_time", nullable = false)
+	//@Column(name = "trasanction_time", nullable = false)
 	private Date time;
-	@Column(name = "trasanction_amount", nullable = false)
+	//@Column(name = "trasanction_amount", nullable = false)
 	private Double amount;
 	public String getTrasanctionId() {
 		return trasanctionId;

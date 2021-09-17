@@ -10,20 +10,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 @Entity
-@Table(name="customer", uniqueConstraints = {
-        @UniqueConstraint(name = "uk_deposit_id", columnNames = {"deposit_id"})}
-        )
+//@Table(name="customer", uniqueConstraints = {
+//        @UniqueConstraint(name = "uk_deposit_id", columnNames = {"deposit_id"})}
+//        )
 public class Customer {
 	
     
-	@Column(name = "customerId", nullable = false)
+	//@Column(name = "customerId", nullable = false)
 	private String customerId;
 	@Id
-	@Column(name = "depositId",unique=true, nullable = false)
+	//@Column(name = "depositId",unique=true, nullable = false)
 	private String depositId;//unique
-	@Column(name = "time", nullable = false)
+	//@Column(name = "time", nullable = false)
 	private Date time;
-	@Column(name = "amount", nullable = false)
+	//@Column(name = "amount", nullable = false)
 	private Double amount;
 	
 	public String getCustomerId() {

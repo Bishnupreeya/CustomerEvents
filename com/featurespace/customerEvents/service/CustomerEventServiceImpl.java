@@ -19,8 +19,8 @@ import com.featurespace.customerEvents.ws.dataObjects.CustomerPaymentRequest;
 @Transactional
 public class CustomerEventServiceImpl implements CustomerEventService {
 	
-	//@Autowired
-	private CustomerTransactionRepositoryImpl  customerTransactionRepository ;
+	@Autowired
+	private CustomerTransactionRepository  customerTransactionRepository ;
 	
 	
 	List<Customer> customerList = new ArrayList<Customer>();
@@ -36,7 +36,9 @@ public class CustomerEventServiceImpl implements CustomerEventService {
 			customer.setAmount(deposit.getDepositAmount());
 			//Customer customerdet = customerTransactionRepository.depositAmountToAccount(customer);
 			Customer customerdet = null;
-			customerTransactionRepository.depositAmountToAccount(customer);
+			//customerTransactionRepository.depositAmountToAccount(customer);
+			
+			customerTransactionRepository.save(customer);
 			
 			/*Account account = customerTransactionRepository.checkAccount(customerdet.getCustomerId());
 			Double amount = 0.0;

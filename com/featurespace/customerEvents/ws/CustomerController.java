@@ -29,6 +29,7 @@ public class CustomerController {
     public CustomerController(CustomerEventService customerEventService) {
         this.customerEventService = customerEventService;
     }
+	
 	@RequestMapping(value = "/deposit" ,method = RequestMethod.POST)
 	public ResponseEntity<String>  depositInAccount(@RequestBody CustomerDepositRequest depositRequest) {
 		s_logger.info(" deposit details {}",depositRequest.toString());

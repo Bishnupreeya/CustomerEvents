@@ -9,14 +9,14 @@ import javax.persistence.Table;
 
 import com.featurespace.customerEvents.ws.dataObjects.EventType;
 @Entity
-@Table(name="account")
+//@Table(name="account")
 public class Account {
 	@Id
-	@Column(name = "customer_id", nullable = false)
+	// @Column(name = "customer_id", nullable = false)
 	private String customerId;
-	@Column(name = "amount", nullable = false)
+	// @Column(name = "amount", nullable = false)
 	private Double amount;
-	@Column(name = "event_type", nullable = false)
+	// @Column(name = "event_type", nullable = false)
 	private EventType eventType;
 
 	public String getCustomerId() {
